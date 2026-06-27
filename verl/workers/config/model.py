@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 from dataclasses import dataclass, field
-from typing import Any, Optional, Union
+from typing import Any, Optional
 
 from omegaconf import MISSING
 from transformers import AutoConfig
@@ -110,7 +110,7 @@ class HFModelConfig(BaseConfig):
     # custom chat template for the model
     custom_chat_template: Optional[str] = None
 
-    external_lib: Optional[Union[str, list[str]]] = None
+    external_lib: Optional[str | list[str]] = None
 
     override_config: dict = field(default_factory=dict)
 
